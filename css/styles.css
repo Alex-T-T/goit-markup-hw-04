@@ -11,6 +11,7 @@
   --color-bgd-secondary: #2f303a;
   --color-bgd-team: #f5f4fa;
   --color-text-adress-link: rgba(255, 255, 255, 0.6);
+  --color-fill-icon: #afb1b8;
 }
 
 body {
@@ -52,6 +53,12 @@ img {
 }
 /* ==========START HEADER========== */
 
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+
 .logo {
   font-family: var(--font-family-secondary);
   font-weight: 700;
@@ -60,9 +67,11 @@ img {
   letter-spacing: 0.03em;
   color: var(--color-logo);
 }
+
 .logo-light {
   color: var(--color-logo-light-bgd);
 }
+
 .navigation-link {
   font-weight: 500;
   font-size: 14px;
@@ -91,14 +100,48 @@ img {
 .connection-link:focus {
   color: var(--color-logo);
 }
+
 .connection-icon {
   margin-right: 10px;
 }
+
 .connection-link:hover > .connection-icon,
 .connection-link:focus > .connection-icon {
   fill: currentColor;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .logo.link {
+  margin-right: 93px;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-item:not(:nth-last-child(-n + 1)) {
+  margin-right: 50px;
+}
+
+.connection-list {
+  display: flex;
+  align-items: center;
+}
+
+.connection-item:not(:nth-last-child(-n + 1)) {
+  margin-right: 50px;
+}
 /* ==========END HEADER========== */
 
 /* ==========START MAIN========== */
@@ -163,6 +206,39 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.features-list {
+  display: flex;
+  margin-left: -30px;
+}
+.features-item {
+  margin-left: 30px;
+  flex-basis: calc((100% - 120px) / 4);
+}
+.features-icon-rect {
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+/* ========== START FLEX ACTIVITY ========== */
+.activity-list {
+  display: flex;
+  justify-content: space-between;
+}
+.activity.section {
+  padding-top: 0px;
+}
 /* ==========END FEATURES========== */
 
 /* ==========START WHAT ARE WE DOING========== */
@@ -204,9 +280,64 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.team-list {
+  display: flex;
+  margin-left: -30px;
+}
+.team-item-foot {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icon {
+  fill: var(--color-fill-icon);
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--color-logo);
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--color-logo-dark-bgd);
 }
 /* ==========END OUR TEAM========== */
 
+/* ==========START CLIENTS========== */
+.clients-list {
+  display: flex;
+  margin-left: -30px;
+}
+.clients-link {
+  display: flex;
+}
+.clients-item {
+  margin-left: 30px;
+  flex-basis: calc((100% - 90px) / 3);
+  border: 1px solid var(--color-fill-icon);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 16px 32px;
+  fill: var(--color-fill-icon);
+}
+/* ==========END CLIENTS========== */
 /* ==========END MAIN========== */
 
 /* ==========START FOOTER========== */
@@ -241,6 +372,13 @@ img {
 .adress-link:hover,
 .adress-link:focus {
   color: var(--color-logo);
+}
+
+.adress-item {
+  margin-bottom: 9px;
+}
+.adress-item:last-child {
+  margin-bottom: 0px;
 }
 /* ==========END FOOTER========== */
 
@@ -282,112 +420,6 @@ img {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-/* ==========END PORTFOLIO========== */
-
-/* ==========START FLEXBOX========== */
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
-}
-/* ========== START FLEX HEADER ========== */
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navigation {
-  display: flex;
-  align-items: center;
-}
-.header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ececec;
-}
-.navigation .logo.link {
-  margin-right: 93px;
-}
-.navigation-list {
-  display: flex;
-  align-items: center;
-}
-.navigation-item:not(:nth-last-child(-n + 1)) {
-  margin-right: 50px;
-}
-.connection-list {
-  display: flex;
-  align-items: center;
-}
-.connection-item:not(:nth-last-child(-n + 1)) {
-  margin-right: 50px;
-}
-/* ========== END FLEX HEADER ========== */
-
-/* ========== START FLEX HERO ========== */
-
-/* ========== END FLEX HERO ========== */
-
-/* ========== START FLEX FEATURES ========== */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-.features-list {
-  display: flex;
-  margin-left: -30px;
-}
-.features-item {
-  margin-left: 30px;
-  flex-basis: calc((100% - 120px) / 4);
-}
-.features-icon-rect {
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  padding: 25px 100px;
-  margin-bottom: 30px;
-}
-/* ========== START FLEX ACTIVITY ========== */
-.activity-list {
-  display: flex;
-  justify-content: space-between;
-}
-.activity.section {
-  padding-top: 0px;
-}
-/* ========== STAR FLEX TEAM ========== */
-
-.team-list {
-  display: flex;
-  margin-left: -30px;
-}
-.team-item-foot {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-/* ========== START FLEX FOOTER ========== */
-
-.adress-item {
-  margin-bottom: 9px;
-}
-.adress-item:last-child {
-  margin-bottom: 0px;
-}
-/* ========== START FLEX PORTFOLIO ==========*/
 .filters-list {
   display: flex;
   justify-content: center;
@@ -416,4 +448,19 @@ img {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+/* ==========END PORTFOLIO========== */
+
+/* ==========START FLEXBOX========== */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
 }
