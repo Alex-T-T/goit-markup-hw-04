@@ -77,6 +77,9 @@ img {
 }
 
 .connection-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -88,6 +91,14 @@ img {
 .connection-link:focus {
   color: var(--color-logo);
 }
+.connection-icon {
+  margin-right: 10px;
+}
+.connection-link:hover > .connection-icon,
+.connection-link:focus > .connection-icon {
+  fill: currentColor;
+}
+
 /* ==========END HEADER========== */
 
 /* ==========START MAIN========== */
@@ -95,6 +106,9 @@ img {
 /* ==========START HERO========== */
 
 .hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-hero.jpg);
+  background-size: cover;
   background-color: var(--color-bgd-secondary);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -322,8 +336,16 @@ img {
 /* ========== END FLEX HERO ========== */
 
 /* ========== START FLEX FEATURES ========== */
-.hidden-title {
-  display: none;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 .features-list {
   display: flex;
@@ -332,6 +354,12 @@ img {
 .features-item {
   margin-left: 30px;
   flex-basis: calc((100% - 120px) / 4);
+}
+.features-icon-rect {
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 /* ========== START FLEX ACTIVITY ========== */
 .activity-list {
