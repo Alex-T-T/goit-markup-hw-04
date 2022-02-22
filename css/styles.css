@@ -397,8 +397,6 @@ img {
 /* ==========START PORTFOLIO========== */
 .filters-btn {
   padding: 6px 22px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   font-family: var(--font-family-main);
   font-weight: 500;
   font-size: 16px;
@@ -414,6 +412,8 @@ img {
 .filters-btn:focus {
   background-color: var(--color-logo);
   color: var(--color-logo-dark-bgd);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .drafts-item {
   box-sizing: border-box;
